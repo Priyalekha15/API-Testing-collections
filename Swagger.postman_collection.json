@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "918bbbe6-8de9-43d0-82c4-013ca88e9653",
+		"name": "Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32196150",
+		"_collection_link": "https://www.postman.com/priyalekha15/workspace/myworkspace/collection/32196150-918bbbe6-8de9-43d0-82c4-013ca88e9653?action=share&source=collection_link&creator=32196150"
+	},
+	"item": [
+		{
+			"name": "Get Activities request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

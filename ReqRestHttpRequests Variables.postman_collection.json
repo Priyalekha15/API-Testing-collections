@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "dc7410af-7553-4c8b-8beb-719a537ebed2",
+		"name": "ReqRestHttpRequests Variables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32196150",
+		"_collection_link": "https://www.postman.com/priyalekha15/workspace/myworkspace/collection/32196150-dc7410af-7553-4c8b-8beb-719a537ebed2?action=share&source=collection_link&creator=32196150"
+	},
+	"item": [
+		{
+			"name": "GETRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_QA_Env}}/api/users?page=2",
+					"host": [
+						"{{URL_QA_Env}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETRequest localVariablesdemo",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//to set local variables\r",
+							"pm.variables.set(\"URL_local\",\"https://reqres.in\");\r",
+							"\r",
+							"//to set global variables\r",
+							"pm.globals.set(\"userid_global\",\"2\");\r",
+							"\r",
+							"//to set Collection variables\r",
+							"pm.collectionVariables.set(\"userid_collection\",\"2\");\r",
+							"\r",
+							"//to set env Variables\r",
+							"pm.environment.set(\"userid_env\",\"2\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//to get the value of variables\r",
+							"console.log(pm.globals.get(\"userid_global\"));\r",
+							"console.log(pm.collectionVariables.get(\"userid_collection\"));\r",
+							"console.log(pm.environment.get(\"userid_env\"));\r",
+							"\r",
+							"//to unset global variables\r",
+							"pm.globals.unset(\"userid_global\");\r",
+							"\r",
+							"//to unset Collection variables\r",
+							"pm.collectionVariables.unset(\"userid_collection\");\r",
+							"\r",
+							"//to unset env Variables\r",
+							"pm.environment.unset(\"userid_env\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_local}}/api/users?page={{userid_collection}}",
+					"host": [
+						"{{URL_local}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{userid_collection}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"priya\",\r\n    \"job\": \"trainer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_Global}}/api/users",
+					"host": [
+						"{{URL_Global}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUTRequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"priya\",\r\n    \"job\": \"AutomationEngineer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_Global}}/api/users/184",
+					"host": [
+						"{{URL_Global}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"184"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETERequest",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/184",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"184"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_Collect",
+			"value": "https://reqres.in",
+			"type": "string"
+		}
+	]
+}

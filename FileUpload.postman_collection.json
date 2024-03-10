@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "d6a50bdd-c6b9-4d64-b3f6-fb5056ab607c",
+		"name": "FileUpload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32196150",
+		"_collection_link": "https://www.postman.com/priyalekha15/workspace/myworkspace/collection/32196150-d6a50bdd-c6b9-4d64-b3f6-fb5056ab607c?action=share&source=collection_link&creator=32196150"
+	},
+	"item": [
+		{
+			"name": "Single File upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ADMIN/Downloads/resume.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploadFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple File Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/ADMIN/Downloads/File+Upload (1).pdf",
+								"/C:/Users/ADMIN/Downloads/File+Upload.pdf"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploadMultipleFiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"uploadMultipleFiles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
